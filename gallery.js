@@ -159,8 +159,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     currentIndex = index;
 
+    const filename = photos[currentIndex];
+
     viewerImage.src =
-        `Previous year/${year}/${photos[index]}`;
+        `Previous year/${year}/${filename}`;
 
     viewerImage.alt =
         `Team CFC ${year}`;
