@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const img = document.createElement("img");
 
-        img.src = `Previous year/${year}/${filename}`;
+      img.src = `${year}/${filename}`;
         img.alt = `Team CFC ${year}`;
         img.loading = "lazy";
 
