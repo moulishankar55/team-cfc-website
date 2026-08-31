@@ -1,0 +1,384 @@
+/* =========================================================
+   TEAM CFC GALLERY — ORIGINAL THEME
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #fbf8f0;
+    color: #5b0b16;
+    font-family: Arial, sans-serif;
+}
+
+
+/* ================= HEADER ================= */
+
+.gallery-header {
+    background: #760817;
+    color: #f4d06f;
+
+    min-height: 190px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    padding: 35px 30px;
+    text-align: center;
+}
+
+.gallery-header h1 {
+    margin: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 52px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    color: #f4d06f;
+}
+
+#gallery-year {
+    margin: 8px 0 0 0;
+
+    font-size: 20px;
+    letter-spacing: 5px;
+
+    color: #f4d06f;
+}
+
+
+/* ================= BACK BUTTON ================= */
+
+.back-btn {
+    position: absolute;
+    left: 28px;
+    top: 28px;
+
+    padding: 11px 18px;
+
+    border: 1px solid #e2b84b;
+    color: #f4d06f;
+    background: transparent;
+
+    text-decoration: none;
+    font-size: 14px;
+
+    transition: 0.25s ease;
+}
+
+.back-btn:hover {
+    background: #e2b84b;
+    color: #760817;
+}
+
+
+/* ================= GALLERY ================= */
+
+main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+
+    padding: 40px 20px 70px;
+}
+
+
+/* IMAGE CARD */
+
+.gallery-grid img {
+    width: 100%;
+    height: 180px;
+
+    object-fit: cover;
+
+    display: block;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.gallery-grid img:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 10px 25px rgba(91, 11, 22, 0.20);
+}
+
+
+/* ================= EMPTY GALLERY ================= */
+
+.gallery-empty {
+    text-align: center;
+
+    padding: 100px 20px;
+
+    color: #760817;
+}
+
+.gallery-empty h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 30px;
+}
+
+
+/* =========================================================
+   FULLSCREEN PHOTO POPUP
+   ========================================================= */
+
+.photo-viewer {
+    position: fixed;
+    inset: 0;
+
+    z-index: 99999;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0, 0, 0, 0.94);
+
+    padding: 30px;
+}
+
+.photo-viewer.show {
+    display: flex;
+}
+
+
+/* IMAGE AREA */
+
+.viewer-content {
+    width: 90vw;
+    height: 90vh;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+.viewer-image {
+    max-width: 90vw;
+    max-height: 88vh;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+
+    border-radius: 6px;
+
+    user-select: none;
+}
+
+
+/* ================= CLOSE ================= */
+
+.viewer-close {
+    position: fixed;
+
+    top: 22px;
+    right: 30px;
+
+    width: 48px;
+    height: 48px;
+
+    border: 1px solid #e2b84b;
+    border-radius: 50%;
+
+    background: rgba(118, 8, 23, 0.85);
+
+    color: #f4d06f;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    z-index: 100000;
+}
+
+.viewer-close:hover {
+    background: #e2b84b;
+    color: #760817;
+}
+
+
+/* ================= LEFT / RIGHT ================= */
+
+.viewer-prev,
+.viewer-next {
+    position: fixed;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 55px;
+    height: 55px;
+
+    border: 1px solid #e2b84b;
+    border-radius: 50%;
+
+    background: rgba(118, 8, 23, 0.85);
+
+    color: #f4d06f;
+
+    font-size: 30px;
+
+    cursor: pointer;
+
+    z-index: 100000;
+
+    transition: 0.2s ease;
+}
+
+.viewer-prev {
+    left: 25px;
+}
+
+.viewer-next {
+    right: 25px;
+}
+
+.viewer-prev:hover,
+.viewer-next:hover {
+    background: #e2b84b;
+    color: #760817;
+}
+
+
+/* ================= COUNTER ================= */
+
+.viewer-counter {
+    position: fixed;
+
+    bottom: 20px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    color: #f4d06f;
+
+    font-size: 14px;
+
+    letter-spacing: 2px;
+
+    z-index: 100000;
+}
+
+
+/* STOP BACKGROUND SCROLL */
+
+body.viewer-open {
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .gallery-grid img {
+        height: 160px;
+    }
+
+    .gallery-header h1 {
+        font-size: 42px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .gallery-header {
+        min-height: 160px;
+        padding: 30px 15px;
+    }
+
+    .gallery-header h1 {
+        font-size: 34px;
+    }
+
+    #gallery-year {
+        font-size: 16px;
+        letter-spacing: 3px;
+    }
+
+    .back-btn {
+        left: 12px;
+        top: 15px;
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 25px 10px 50px;
+    }
+
+    .gallery-grid img {
+        height: 130px;
+    }
+
+    .viewer-prev,
+    .viewer-next {
+        width: 44px;
+        height: 44px;
+        font-size: 24px;
+    }
+
+    .viewer-prev {
+        left: 8px;
+    }
+
+    .viewer-next {
+        right: 8px;
+    }
+
+    .viewer-close {
+        top: 12px;
+        right: 12px;
+    }
+
+    .viewer-image {
+        max-width: 95vw;
+        max-height: 82vh;
+    }
+}
