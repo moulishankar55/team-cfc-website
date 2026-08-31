@@ -155,15 +155,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* OPEN PHOTO */
 
-   function openViewer(index) {
+  function openViewer(index) {
 
     currentIndex = index;
 
-    viewerImage.src =
-        `Previous year/${year}/${photos[index]}`;
+    viewerImage.src = `${year}/${photos[index]}`;
 
-    viewerImage.alt =
-        `Team CFC ${year}`;
+    viewerImage.alt = `Team CFC ${year}`;
 
     viewerCounter.textContent =
         `${currentIndex + 1} / ${photos.length}`;
