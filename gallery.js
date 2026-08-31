@@ -172,7 +172,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.body.classList.add("viewer-open");
 }
-    }
 
 
     /* CLOSE */
