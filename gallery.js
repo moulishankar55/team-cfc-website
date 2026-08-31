@@ -155,22 +155,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* OPEN PHOTO */
 
-    function openViewer(index) {
+   function openViewer(index) {
 
-        currentIndex = index;
+    currentIndex = index;
 
-        viewerImage.src =
-           viewerImg.src = `${year}/${filename}`;
+    viewerImage.src =
+        `Previous year/${year}/${photos[index]}`;
 
-        viewerImage.alt =
-            `Team CFC ${year}`;
+    viewerImage.alt =
+        `Team CFC ${year}`;
 
-        viewerCounter.textContent =
-            `${currentIndex + 1} / ${photos.length}`;
+    viewerCounter.textContent =
+        `${currentIndex + 1} / ${photos.length}`;
 
-        viewer.classList.add("show");
+    viewer.classList.add("show");
 
-        document.body.classList.add("viewer-open");
+    document.body.classList.add("viewer-open");
+}
     }
 
 
