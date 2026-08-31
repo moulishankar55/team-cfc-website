@@ -159,10 +159,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     currentIndex = index;
 
-    const filename = photos[currentIndex];
-
     viewerImage.src =
-        `Previous year/${year}/${filename}`;
+        `Previous year/${year}/${photos[index]}`;
 
     viewerImage.alt =
         `Team CFC ${year}`;
@@ -174,6 +172,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.body.classList.add("viewer-open");
 }
+
 
 
     /* CLOSE */
