@@ -1249,48 +1249,140 @@ a {
     font-size: 11px;
 }
 
+/* =========================
+   LOCATION MAP BOX
+   ========================= */
+/* ================================
+   CONTACT MAP — MEDIUM SIZE
+   ================================ */
+
 .map-placeholder {
-    min-height: 330px;
+    position: relative;
+    width: 100%;
+    max-width: 560px;
+    height: 380px;
+    margin: 0 auto;
 
-    display: grid;
-    place-items: center;
+    overflow: hidden;
 
-    border: 1px solid rgba(190,150,70,0.45);
-
-    background:
-        radial-gradient(
-            circle at center,
-            rgba(190,150,70,0.12),
-            transparent 60%
-        ),
-        #f5ead4;
+    border: 1px solid #d4a63a;
+    background: #eee;
+    box-shadow: 0 12px 30px rgba(80, 0, 15, 0.12);
 }
 
+/* MAP IMAGE / MAP */
+.map-graph {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.map-graph iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
+
+/* GVR NAGAR CARD */
 .map-inner {
+    position: absolute;
+    z-index: 5;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 270px;
+    padding: 28px 25px;
+
     text-align: center;
+
+    background: rgba(255, 250, 240, 0.96);
+
+    border: 1px solid #d4a63a;
+
+    box-shadow:
+        0 15px 35px rgba(50, 0, 10, 0.25);
 }
 
+/* PIN */
 .map-pin {
-    font-size: 38px;
+    font-size: 25px;
+    margin-bottom: 8px;
 }
 
+/* TITLE */
 .map-inner h3 {
-    margin-top: 8px;
-
-    color: var(--maroon);
+    margin: 0;
 
     font-family: var(--serif);
-    font-size: 32px;
+    font-size: 27px;
+    color: #6f0715;
 }
 
+/* LOCATION */
 .map-inner p {
-    margin: 6px 0 20px;
+    margin: 7px 0 18px;
 
-    color: var(--muted);
-
-    font-size: 10px;
+    font-size: 12px;
+    color: #8d7777;
 }
 
+/* DIRECTIONS BUTTON */
+.map-inner .primary-btn {
+    display: inline-block;
+
+    padding: 12px 20px;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+
+/* ================================
+   MOBILE
+   ================================ */
+
+@media (max-width: 768px) {
+
+    .map-placeholder {
+        width: 100%;
+        height: 330px;
+    }
+
+    .map-inner {
+        width: 240px;
+        padding: 23px 18px;
+    }
+
+    .map-inner h3 {
+        font-size: 24px;
+    }
+}
+
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .map-placeholder {
+        height: 350px;
+    }
+
+    .map-overlay {
+        width: 240px;
+        padding: 22px 18px;
+    }
+
+    .map-overlay h3 {
+        font-size: 25px;
+    }
+
+}
 
 /* ================= FOOTER ================= */
 
@@ -1551,7 +1643,7 @@ a {
 
         align-items: flex-start;
 
-        background-position: 65% center;
+      background-position: center center;
     }
 
     .hero-overlay {
@@ -1986,24 +2078,34 @@ a {
     letter-spacing: 1px;
     color: var(--muted);
 }
+/* MOBILE HOME WHATSAPP BUTTON */
 .whatsapp-home-btn {
-    display: block;
-    width: 100%;
-    padding: 16px 20px;
-    margin-top: 12px;
-    text-align: center;
-    text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    border: 1px solid #c9a227;
-    color: #6f0715;
-    background: rgba(255, 255, 255, 0.9);
-    transition: 0.3s ease;
+    display: none;
 }
 
-.whatsapp-home-btn:hover {
-    background: #6f0715;
-    color: #fff;
+@media (max-width: 800px) {
+    .whatsapp-home-btn {
+        display: block;
+        width: 100%;
+        padding: 16px 20px;
+        margin-top: 12px;
+        text-align: center;
+        text-decoration: none;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        border: 1px solid #c9a227;
+        border-radius: 4px;
+        color: #6f0715;
+        background: rgba(255, 255, 255, 0.9);
+        transition: 0.3s ease;
+        box-sizing: border-box;
+    }
+
+    .whatsapp-home-btn:hover {
+        background: #6f0715;
+        color: #fff;
+    }
 }
+
