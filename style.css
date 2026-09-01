@@ -1977,3 +1977,24 @@ a {
     letter-spacing: 1px;
     color: var(--muted);
 }
+.whatsapp-home-btn {
+    display: block;
+    width: 100%;
+    padding: 16px 20px;
+    margin-top: 12px;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border: 1px solid #c9a227;
+    color: #6f0715;
+    background: rgba(255, 255, 255, 0.9);
+    transition: 0.3s ease;
+}
+
+.whatsapp-home-btn:hover {
+    background: #6f0715;
+    color: #fff;
+}
