@@ -2150,3 +2150,307 @@ a {
         text-align: center;
     }
 }
+/* =========================================================
+   FINAL MOBILE HERO FIX
+   DESKTOP VERSION IS NOT TOUCHED
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    /* ---------- HEADER ---------- */
+
+    .navbar {
+        min-height: 70px;
+        padding: 10px 14px;
+        gap: 8px;
+        flex-wrap: nowrap;
+    }
+
+    .logo-area {
+        gap: 8px;
+        min-width: 0;
+    }
+
+    .logo-symbol {
+        width: 42px;
+        height: 42px;
+        font-size: 24px;
+        flex-shrink: 0;
+    }
+
+    .logo-area h1 {
+        font-size: 21px;
+        letter-spacing: 1.5px;
+    }
+
+    .logo-area p {
+        font-size: 6px;
+        letter-spacing: 1.2px;
+    }
+
+    /* Keep WhatsApp ONLY in header */
+    .whatsapp-btn {
+        display: inline-flex !important;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+
+        padding: 11px 12px;
+        font-size: 9px;
+        letter-spacing: 0.5px;
+        border-radius: 4px;
+    }
+
+    /* ---------- MOBILE MENU ---------- */
+
+    .menu-toggle {
+        display: block;
+        order: 3;
+        margin-left: 2px;
+        font-size: 27px;
+        flex-shrink: 0;
+    }
+
+    .nav-links {
+        top: 70px;
+    }
+
+    /* ---------- HERO ---------- */
+
+    .hero {
+        min-height: auto !important;
+        height: auto !important;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        overflow: visible !important;
+
+        /*
+           Show the Ganesh image properly instead of
+           aggressively cropping it.
+        */
+        background-size: 100% auto !important;
+        background-position: center top !important;
+        background-repeat: no-repeat !important;
+
+        padding-bottom: 0;
+    }
+
+    .hero-overlay {
+        background:
+            linear-gradient(
+                180deg,
+                rgba(255,250,240,0.94) 0%,
+                rgba(255,250,240,0.86) 35%,
+                rgba(255,250,240,0.45) 65%,
+                rgba(255,250,240,0.88) 100%
+            ) !important;
+    }
+
+    .hero-content {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 32px 16px 28px !important;
+
+        text-align: center;
+
+        z-index: 3;
+    }
+
+    .ornament-title {
+        margin-bottom: 16px;
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .hero h2 {
+        font-size: clamp(46px, 14vw, 62px) !important;
+        line-height: 0.86 !important;
+        letter-spacing: 1px;
+    }
+
+    .year {
+        margin-top: 12px;
+        font-size: 48px !important;
+    }
+
+    .tagline {
+        margin-top: 9px;
+        font-size: 8px;
+        letter-spacing: 2px;
+    }
+
+    .gold-divider {
+        margin: 14px 0 18px;
+        font-size: 12px;
+    }
+
+    .date-box {
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
+
+        padding: 12px 10px;
+        font-size: 10px;
+        text-align: center;
+    }
+
+    .location {
+        margin-top: 12px;
+        font-size: 11px;
+        line-height: 1.65;
+    }
+
+    /* Hero buttons */
+    .hero-buttons {
+        width: 100%;
+        margin-top: 18px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        width: 100%;
+        min-height: 50px;
+    }
+
+    /* REMOVE WHATSAPP FROM HERO */
+    .hero .whatsapp-home-btn {
+        display: none !important;
+    }
+
+    /* ---------- COUNTDOWN ---------- */
+
+    .countdown-wrap {
+        position: relative !important;
+
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+
+        width: calc(100% - 28px) !important;
+        max-width: 430px;
+
+        margin: 0 auto 22px;
+
+        padding: 15px 9px 16px;
+
+        border: 1px solid var(--gold);
+        border-radius: 14px;
+
+        background:
+            linear-gradient(
+                135deg,
+                var(--maroon),
+                var(--maroon-dark)
+            );
+
+        box-shadow:
+            0 12px 28px rgba(70, 0, 10, 0.22);
+
+        z-index: 5;
+    }
+
+    .countdown-label {
+        margin-bottom: 11px;
+
+        font-size: 8px;
+        letter-spacing: 1.4px;
+
+        color: var(--gold-light);
+    }
+
+    .countdown {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .count-box {
+        min-width: 0;
+    }
+
+    .count-box strong {
+        font-size: 28px !important;
+        line-height: 1;
+    }
+
+    .count-box span {
+        margin-top: 5px;
+        font-size: 6px !important;
+        letter-spacing: 0.8px;
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .navbar {
+        padding: 9px 10px;
+    }
+
+    .logo-symbol {
+        width: 38px;
+        height: 38px;
+        font-size: 22px;
+    }
+
+    .logo-area h1 {
+        font-size: 18px;
+    }
+
+    .logo-area p {
+        font-size: 5px;
+    }
+
+    .whatsapp-btn {
+        padding: 10px 9px;
+        font-size: 8px;
+    }
+
+    .menu-toggle {
+        font-size: 25px;
+    }
+
+    .hero-content {
+        padding: 28px 13px 24px !important;
+    }
+
+    .hero h2 {
+        font-size: 48px !important;
+    }
+
+    .year {
+        font-size: 45px !important;
+    }
+
+    .date-box {
+        font-size: 9px;
+    }
+
+    .countdown-wrap {
+        width: calc(100% - 20px) !important;
+        padding: 13px 7px 14px;
+        border-radius: 12px;
+    }
+
+    .countdown-label {
+        font-size: 7px;
+        letter-spacing: 1.1px;
+    }
+
+    .count-box strong {
+        font-size: 25px !important;
+    }
+
+    .count-box span {
+        font-size: 5.5px !important;
+    }
+}
