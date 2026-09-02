@@ -33,9 +33,8 @@ document.addEventListener("DOMContentLoaded", () => {
         ],
 
         "2024": [
-             "ChatGPT Image Sep 1, 2026, 09_46_52 PM.jpg",
+    "ChatGPT Image Sep 1, 2026, 09_46_52 PM.jpg",
     "ChatGPT Image Sep 1, 2026, 09_48_28 PM.jpg",
-
     "IMG_8780.jpg",
     "IMG_8844.jpg",
     "IMG_8851 (1).JPG",
@@ -43,21 +42,17 @@ document.addEventListener("DOMContentLoaded", () => {
     "IMG_8917.JPG",
     "IMG_8920.JPG",
     "IMG_9143.JPG",
-
     "IMG-20240811-WA0022_1.jpg",
     "IMG-20240827-WA0001.jpg",
     "IMG-20240828-WA0001.jpg",
     "IMG-20240907-WA0027.jpg",
     "IMG-20240907-WA0033.jpg",
     "IMG-20240907-WA0039.jpg",
-
     "IMG-20250812-WA0023 (1).jpg",
     "IMG-20250812-WA0023.jpg",
     "IMG-20250825-WA0040 (1).jpg",
-
-    "IMG-20250827_115633 (1).jpg",
-    "IMG-20250827_115635 (1).jpg",
-
+    "IMG_20250827_115633 (1).jpg",
+    "IMG_20250827_115635 (1).jpg",
     "Screenshot 2026-08-30 150651.png"
         ],
 
