@@ -35,6 +35,8 @@ document.addEventListener("DOMContentLoaded", () => {
         "2024": [
     "ChatGPT Image Sep 1, 2026, 09_46_52 PM.jpg",
     "ChatGPT Image Sep 1, 2026, 09_48_28 PM.jpg",
+    "IMG_8780.JPG",
+    "IMG_8844.JPG",
     "IMG_8851 (1).JPG",
     "IMG_8852 (1).JPG",
     "IMG_8917.JPG",
