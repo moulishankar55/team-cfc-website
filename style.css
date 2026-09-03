@@ -2454,3 +2454,121 @@ a {
         font-size: 5.5px !important;
     }
 }
+/* =========================================================
+   COUNTDOWN — BELOW HERO BUTTONS
+   ========================================================= */
+
+.hero-content .countdown-wrap {
+    position: relative;
+    left: auto;
+    right: auto;
+    bottom: auto;
+
+    width: 100%;
+    max-width: 520px;
+
+    margin-top: 22px;
+    margin-left: 0;
+
+    padding: 17px 20px 18px;
+
+    border: 1px solid var(--gold);
+    border-radius: 14px;
+
+    background: linear-gradient(
+        135deg,
+        var(--maroon),
+        var(--maroon-dark)
+    );
+
+    box-shadow:
+        0 16px 34px rgba(70, 0, 10, 0.24),
+        0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+
+    backdrop-filter: blur(5px);
+}
+
+.hero-content .countdown-label {
+    margin-bottom: 12px;
+
+    color: var(--gold-light);
+
+    text-align: center;
+
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.hero-content .countdown {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.hero-content .count-box {
+    text-align: center;
+
+    border-right: 1px solid rgba(237, 196, 90, 0.35);
+}
+
+.hero-content .count-box:last-child {
+    border-right: 0;
+}
+
+.hero-content .count-box strong {
+    color: #fff7df;
+    font-size: 38px;
+}
+
+.hero-content .count-box span {
+    color: #f0dcae;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 800px) {
+
+    .hero-content .countdown-wrap {
+        width: 100%;
+        max-width: none;
+
+        margin-top: 20px;
+
+        padding: 15px 12px;
+    }
+
+    .hero-content .count-box strong {
+        font-size: 28px;
+    }
+
+    .hero-content .count-box span {
+        font-size: 7px;
+    }
+
+}
+
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width: 520px) {
+
+    .hero-content .countdown-wrap {
+        margin-top: 18px;
+        padding: 14px 8px;
+        border-radius: 12px;
+    }
+
+    .hero-content .countdown-label {
+        font-size: 8px;
+        letter-spacing: 1.5px;
+    }
+
+    .hero-content .count-box strong {
+        font-size: 25px;
+    }
+
+    .hero-content .count-box span {
+        font-size: 6px;
+    }
+
+}
