@@ -2108,365 +2108,160 @@ a {
         color: #fff;
     }
 }
-/* ================================
-   MOBILE HERO - FULL GANESH IMAGE
-   ================================ */
+/* =====================================================
+   MOBILE HERO — TEXT → FULL GANESH → DETAILS
+   DESKTOP IS NOT CHANGED
+   ===================================================== */
 
 @media (max-width: 768px) {
 
-    .hero {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        min-height: auto;
-        height: auto;
-    }
-
-    /* Image section */
-    .hero-image {
-        order: 1;
-        width: 100%;
-        height: auto;
-        min-height: 0;
-        overflow: visible;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .hero-image img {
-        width: 100%;
-        height: auto;
-        object-fit: contain;
-        object-position: center;
-        display: block;
-    }
-
-    /* Text section */
-    .hero-content {
-        order: 2;
-        width: 100%;
-        padding: 40px 20px;
-        text-align: center;
-    }
-}
-/* =========================================================
-   FINAL MOBILE HERO FIX
-   DESKTOP VERSION IS NOT TOUCHED
-   ========================================================= */
-
-@media (max-width: 800px) {
-
-    /* ---------- HEADER ---------- */
-
-    .navbar {
-        min-height: 70px;
-        padding: 10px 14px;
-        gap: 8px;
-        flex-wrap: nowrap;
-    }
-
-    .logo-area {
-        gap: 8px;
-        min-width: 0;
-    }
-
-    .logo-symbol {
-        width: 42px;
-        height: 42px;
-        font-size: 24px;
-        flex-shrink: 0;
-    }
-
-    .logo-area h1 {
-        font-size: 21px;
-        letter-spacing: 1.5px;
-    }
-
-    .logo-area p {
-        font-size: 6px;
-        letter-spacing: 1.2px;
-    }
-
-    /* Keep WhatsApp ONLY in header */
-    .whatsapp-btn {
-        display: inline-flex !important;
-        align-items: center;
-        justify-content: center;
-        flex-shrink: 0;
-
-        padding: 11px 12px;
-        font-size: 9px;
-        letter-spacing: 0.5px;
-        border-radius: 4px;
-    }
-
-    /* ---------- MOBILE MENU ---------- */
-
-    .menu-toggle {
-        display: block;
-        order: 3;
-        margin-left: 2px;
-        font-size: 27px;
-        flex-shrink: 0;
-    }
-
-    .nav-links {
-        top: 70px;
-    }
-
-    /* ---------- HERO ---------- */
+    /* -----------------------------
+       HERO
+       ----------------------------- */
 
     .hero {
-        min-height: auto !important;
+        position: relative !important;
+
         height: auto !important;
+        min-height: auto !important;
 
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        display: flex !important;
+        flex-direction: column !important;
 
-        overflow: visible !important;
+        padding: 0 !important;
 
-        /*
-           Show the Ganesh image properly instead of
-           aggressively cropping it.
-        */
-        background-size: 100% auto !important;
-        background-position: center top !important;
-        background-repeat: no-repeat !important;
-
-        padding-bottom: 0;
+        background-image: none !important;
+        background-color: #fffaf0 !important;
     }
 
+
+    /* Remove the desktop background overlay */
     .hero-overlay {
-        background:
-            linear-gradient(
-                180deg,
-                rgba(255,250,240,0.94) 0%,
-                rgba(255,250,240,0.86) 35%,
-                rgba(255,250,240,0.45) 65%,
-                rgba(255,250,240,0.88) 100%
-            ) !important;
-    }
-
-    .hero-content {
-        width: 100% !important;
-        margin: 0 !important;
-        padding: 32px 16px 28px !important;
-
-        text-align: center;
-
-        z-index: 3;
-    }
-
-    .ornament-title {
-        margin-bottom: 16px;
-        font-size: 10px;
-        letter-spacing: 2px;
-    }
-
-    .hero h2 {
-        font-size: clamp(46px, 14vw, 62px) !important;
-        line-height: 0.86 !important;
-        letter-spacing: 1px;
-    }
-
-    .year {
-        margin-top: 12px;
-        font-size: 48px !important;
-    }
-
-    .tagline {
-        margin-top: 9px;
-        font-size: 8px;
-        letter-spacing: 2px;
-    }
-
-    .gold-divider {
-        margin: 14px 0 18px;
-        font-size: 12px;
-    }
-
-    .date-box {
-        width: 100%;
-        max-width: 360px;
-        margin: 0 auto;
-
-        padding: 12px 10px;
-        font-size: 10px;
-        text-align: center;
-    }
-
-    .location {
-        margin-top: 12px;
-        font-size: 11px;
-        line-height: 1.65;
-    }
-
-    /* Hero buttons */
-    .hero-buttons {
-        width: 100%;
-        margin-top: 18px;
-
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .primary-btn,
-    .secondary-btn {
-        width: 100%;
-        min-height: 50px;
-    }
-
-    /* REMOVE WHATSAPP FROM HERO */
-    .hero .whatsapp-home-btn {
         display: none !important;
     }
-/* =========================================================
-   COUNTDOWN FINAL FIX
-   Countdown stays BELOW HERO BUTTONS
-   Does NOT overlap the desktop layout
-   ========================================================= */
-
-.countdown-wrap {
-    position: relative;
-    left: auto;
-    right: auto;
-    bottom: auto;
-
-    width: 100%;
-    max-width: 520px;
-
-    margin-top: 22px;
-
-    padding: 17px 20px 18px;
-
-    border: 1px solid var(--gold);
-    border-radius: 14px;
-
-    background: linear-gradient(
-        135deg,
-        var(--maroon),
-        var(--maroon-dark)
-    );
-
-    box-shadow:
-        0 16px 34px rgba(70, 0, 10, 0.24),
-        0 0 0 1px rgba(255, 255, 255, 0.05) inset;
-
-    backdrop-filter: blur(5px);
-}
-
-.countdown-label {
-    margin-bottom: 12px;
-
-    color: var(--gold-light);
-
-    text-align: center;
-
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 2px;
-}
-
-.countdown {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-}
-
-.countdown .count-box {
-    text-align: center;
-
-    border-right: 1px solid rgba(237, 196, 90, 0.35);
-}
-
-.countdown .count-box:last-child {
-    border-right: none;
-}
-
-.count-box strong {
-    display: block;
-
-    color: #fff7df;
-
-    font-family: var(--serif);
-    font-size: 38px;
-    line-height: 1;
-
-    text-shadow: 0 2px 10px rgba(0,0,0,0.18);
-}
-
-.count-box span {
-    display: block;
-
-    margin-top: 5px;
-
-    color: #f0dcae;
-
-    font-size: 7px;
-    font-weight: 700;
-    letter-spacing: 1px;
-}
 
 
-/* ================= MOBILE ================= */
+    /* -----------------------------
+       TEXT FIRST
+       ----------------------------- */
 
-@media (max-width: 800px) {
+    .hero-content {
+        order: 1 !important;
 
-    .countdown-wrap {
-        position: relative;
+        position: relative !important;
 
-        left: auto;
-        right: auto;
-        bottom: auto;
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin: 0 !important;
+        padding: 35px 20px 15px !important;
+
+        box-sizing: border-box;
+
+        text-align: center;
+
+        background: #fffaf0;
+
+        z-index: 2;
+    }
+
+
+    /* -----------------------------
+       GANESH IMAGE — MIDDLE
+       ----------------------------- */
+
+    .hero::before {
+        content: "";
+
+        order: 2;
+
+        display: block;
 
         width: 100%;
-        max-width: none;
 
-        margin-top: 22px;
+        height: 430px;
 
-        padding: 15px 12px 16px;
+        background-image: url("home-bg.png");
+        background-repeat: no-repeat;
 
-        border-radius: 12px;
+        /* SHOW COMPLETE IDOL */
+        background-size: contain;
+
+        /* PERFECT CENTER */
+        background-position: center center;
+
+        background-color: #fffaf0;
+
+        flex-shrink: 0;
     }
 
-    .countdown-label {
-        font-size: 9px;
-        letter-spacing: 1.5px;
+
+    /* -----------------------------
+       COUNTDOWN
+       ----------------------------- */
+
+    .countdown-wrap {
+        order: 4 !important;
+
+        position: relative !important;
+
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+
+        width: calc(100% - 40px) !important;
+
+        margin: 25px auto 25px !important;
+
+        box-sizing: border-box;
     }
 
-    .count-box strong {
-        font-size: 30px;
+
+    /* -----------------------------
+       BUTTONS
+       ----------------------------- */
+
+    .hero-buttons {
+        display: flex !important;
+
+        flex-direction: column !important;
+
+        gap: 12px !important;
+
+        width: 100% !important;
     }
 
-    .count-box span {
-        font-size: 6px;
-        letter-spacing: 0.8px;
+
+    .hero-buttons a {
+        width: 100% !important;
+
+        box-sizing: border-box;
     }
+
 }
 
 
-/* ================= SMALL MOBILE ================= */
+/* =====================================================
+   SMALL MOBILE PHONES
+   ===================================================== */
 
 @media (max-width: 520px) {
 
+    .hero-content {
+        padding: 30px 18px 10px !important;
+    }
+
+
+    .hero::before {
+        height: 390px;
+
+        background-size: contain;
+        background-position: center center;
+    }
+
+
     .countdown-wrap {
-        margin-top: 20px;
-        padding: 14px 8px 15px;
-        border-radius: 11px;
+        width: calc(100% - 30px) !important;
     }
 
-    .countdown-label {
-        font-size: 8px;
-        letter-spacing: 1.2px;
-    }
-
-    .count-box strong {
-        font-size: 27px;
-    }
-
-    .count-box span {
-        font-size: 6px;
-    }
 }
