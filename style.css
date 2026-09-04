@@ -3210,3 +3210,346 @@ a {
     }
 
 }
+/* =====================================================
+   MOBILE HOME — POSTER STYLE
+   GANESH + ALL DETAILS INSIDE ONE HOME
+   DESKTOP COMPLETELY UNTOUCHED
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    /* ==============================
+       COMPLETE MOBILE HOME
+       ============================== */
+
+    .hero {
+        position: relative !important;
+
+        display: block !important;
+
+        height: 970px !important;
+        min-height: 970px !important;
+
+        padding: 0 !important;
+
+        overflow: hidden !important;
+
+        background-image: url("mobile-ganesh.png") !important;
+        background-repeat: no-repeat !important;
+
+        /*
+           Keep the original PNG proportions.
+           Enlarge it enough to make Ganesh prominent.
+        */
+        background-size: cover !important;
+
+        background-position: center 42% !important;
+
+        background-color: #fffaf0 !important;
+    }
+
+
+    /* ==============================
+       REMOVE OLD IMAGE PSEUDO
+       ============================== */
+
+    .hero::before {
+        display: none !important;
+        content: none !important;
+    }
+
+
+    /* ==============================
+       REMOVE OLD OVERLAY
+       ============================== */
+
+    .hero-overlay {
+        display: none !important;
+    }
+
+
+    /* ==============================
+       CONTENT — OVER THE IMAGE
+       ============================== */
+
+    .hero-content {
+        position: relative !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        height: auto !important;
+
+        margin: 0 !important;
+
+        padding: 25px 12px 0 !important;
+
+        box-sizing: border-box !important;
+
+        background: transparent !important;
+
+        z-index: 5 !important;
+
+        text-align: center !important;
+    }
+
+
+    /* ==============================
+       TEAM CFC PRESENTS
+       ============================== */
+
+    .ornament-title {
+        font-size: 9px !important;
+
+        letter-spacing: 1.5px !important;
+
+        margin: 0 0 5px !important;
+
+        line-height: 1.2 !important;
+    }
+
+
+    /* ==============================
+       VINAYAKA CHAVITHI
+       ============================== */
+
+    .hero h2 {
+        font-size: 35px !important;
+
+        line-height: 0.9 !important;
+
+        letter-spacing: 0 !important;
+
+        margin: 5px 0 5px !important;
+
+        text-shadow: none !important;
+    }
+
+
+    /* ==============================
+       2026
+       ============================== */
+
+    .year {
+        font-size: 29px !important;
+
+        line-height: 1 !important;
+
+        margin: 4px 0 2px !important;
+    }
+
+
+    /* ==============================
+       TAGLINE
+       ============================== */
+
+    .tagline {
+        font-size: 7px !important;
+
+        letter-spacing: 1px !important;
+
+        line-height: 1.2 !important;
+
+        margin: 2px 0 3px !important;
+    }
+
+
+    /* ==============================
+       DIVIDER
+       ============================== */
+
+    .gold-divider {
+        font-size: 8px !important;
+
+        margin: 3px 0 !important;
+    }
+
+
+    /* =================================================
+       DATE
+       POSITIONED LOWER — ON THE IMAGE
+       ================================================= */
+
+    .hero .date-box {
+        position: absolute !important;
+
+        top: 680px !important;
+
+        left: 50% !important;
+
+        transform: translateX(-50%) !important;
+
+        width: calc(100% - 35px) !important;
+
+        margin: 0 !important;
+
+        padding: 9px 6px !important;
+
+        box-sizing: border-box !important;
+
+        font-size: 10px !important;
+
+        z-index: 10 !important;
+    }
+
+
+    /* ==============================
+       LOCATION
+       ============================== */
+
+    .hero .location {
+        position: absolute !important;
+
+        top: 735px !important;
+
+        left: 0 !important;
+
+        width: 100% !important;
+
+        margin: 0 !important;
+
+        padding: 0 20px !important;
+
+        box-sizing: border-box !important;
+
+        font-size: 9px !important;
+
+        line-height: 1.4 !important;
+
+        text-align: center !important;
+
+        z-index: 10 !important;
+    }
+
+
+    /* ==============================
+       HIDE BUTTONS
+       ============================== */
+
+    .hero .hero-buttons {
+        display: none !important;
+    }
+
+
+    /* =================================================
+       COUNTDOWN
+       ================================================= */
+
+    .countdown-wrap {
+        position: absolute !important;
+
+        top: 805px !important;
+
+        left: 50% !important;
+
+        right: auto !important;
+
+        bottom: auto !important;
+
+        transform: translateX(-50%) !important;
+
+        width: calc(100% - 25px) !important;
+
+        margin: 0 !important;
+
+        padding: 12px 7px !important;
+
+        box-sizing: border-box !important;
+
+        z-index: 10 !important;
+    }
+
+
+    .countdown-label {
+        font-size: 7px !important;
+
+        letter-spacing: 1px !important;
+
+        margin-bottom: 7px !important;
+    }
+
+
+    .count-box strong {
+        font-size: 21px !important;
+    }
+
+
+    .count-box span {
+        font-size: 7px !important;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL PHONES
+   ===================================================== */
+
+@media (max-width: 520px) {
+
+    .hero {
+        height: 900px !important;
+
+        min-height: 900px !important;
+
+        background-size: cover !important;
+
+        background-position: center 42% !important;
+    }
+
+
+    .hero-content {
+        padding-top: 20px !important;
+    }
+
+
+    .hero h2 {
+        font-size: 32px !important;
+
+        line-height: 0.9 !important;
+    }
+
+
+    .year {
+        font-size: 27px !important;
+    }
+
+
+    .tagline {
+        font-size: 6.5px !important;
+    }
+
+
+    .hero .date-box {
+        top: 625px !important;
+
+        width: calc(100% - 25px) !important;
+
+        font-size: 9px !important;
+    }
+
+
+    .hero .location {
+        top: 680px !important;
+
+        font-size: 8.5px !important;
+    }
+
+
+    .countdown-wrap {
+        top: 750px !important;
+
+        width: calc(100% - 16px) !important;
+    }
+
+
+    .countdown-label {
+        font-size: 6.5px !important;
+    }
+
+
+    .count-box strong {
+        font-size: 19px !important;
+    }
+
+}
