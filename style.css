@@ -2940,3 +2940,273 @@ a {
     }
 
 }
+@media (max-width: 768px) {
+
+    /* =========================================
+       MOBILE HOME — FINAL SPACE ARRANGEMENT
+       ========================================= */
+
+    .hero {
+        position: relative !important;
+        display: block !important;
+
+        height: auto !important;
+        min-height: 0 !important;
+
+        padding: 0 0 18px !important;
+
+        background-image: url("mobile-ganesh.png") !important;
+        background-repeat: no-repeat !important;
+
+        /* Slightly enlarge the background/idol */
+        background-size: 108% 100% !important;
+        background-position: center center !important;
+
+        overflow: hidden !important;
+    }
+
+
+    /* =========================================
+       CONTENT
+       ========================================= */
+
+    .hero-content {
+        position: relative !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin: 0 !important;
+
+        padding: 18px 10px 0 !important;
+
+        box-sizing: border-box !important;
+
+        background: transparent !important;
+
+        z-index: 2 !important;
+
+        text-align: center !important;
+    }
+
+
+    /* =========================================
+       TOP TITLE
+       ========================================= */
+
+    .ornament-title {
+        font-size: 9px !important;
+        letter-spacing: 1.5px !important;
+
+        margin: 0 0 4px !important;
+    }
+
+
+    /* =========================================
+       MAIN HEADING
+       ========================================= */
+
+    .hero h2 {
+        font-size: 34px !important;
+
+        line-height: 0.9 !important;
+
+        letter-spacing: 0 !important;
+
+        margin: 4px 0 5px !important;
+    }
+
+
+    /* =========================================
+       YEAR
+       ========================================= */
+
+    .year {
+        font-size: 30px !important;
+
+        line-height: 1 !important;
+
+        margin: 3px 0 2px !important;
+    }
+
+
+    /* =========================================
+       TAGLINE
+       DIRECTLY BELOW HEADING
+       ========================================= */
+
+    .tagline {
+        font-size: 7px !important;
+
+        letter-spacing: 1px !important;
+
+        margin: 2px 0 3px !important;
+    }
+
+
+    /* =========================================
+       DIVIDER
+       ========================================= */
+
+    .gold-divider {
+        font-size: 8px !important;
+
+        margin: 2px 0 !important;
+    }
+
+
+    /* =========================================
+       DATE
+       UNDER THE IDOL
+       ========================================= */
+
+    .hero .date-box {
+        margin-top: 170px !important;
+
+        width: calc(100% - 30px) !important;
+
+        padding: 8px 6px !important;
+
+        font-size: 10px !important;
+
+        box-sizing: border-box !important;
+
+        position: relative !important;
+
+        z-index: 3 !important;
+    }
+
+
+    /* =========================================
+       LOCATION
+       ========================================= */
+
+    .hero .location {
+        font-size: 9px !important;
+
+        line-height: 1.35 !important;
+
+        margin-top: 5px !important;
+
+        position: relative !important;
+
+        z-index: 3 !important;
+    }
+
+
+    /* =========================================
+       BUTTONS — HIDDEN ON MOBILE
+       ========================================= */
+
+    .hero .hero-buttons {
+        display: none !important;
+    }
+
+
+    /* =========================================
+       COUNTDOWN
+       LOWER + CLEAN
+       ========================================= */
+
+    .countdown-wrap {
+        position: relative !important;
+
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+
+        width: calc(100% - 20px) !important;
+
+        margin: 25px auto 0 !important;
+
+        padding: 11px 7px 12px !important;
+
+        box-sizing: border-box !important;
+
+        z-index: 3 !important;
+    }
+
+
+    .countdown-label {
+        font-size: 7px !important;
+
+        letter-spacing: 1px !important;
+
+        margin-bottom: 7px !important;
+    }
+
+
+    .count-box strong {
+        font-size: 22px !important;
+    }
+
+
+    .count-box span {
+        font-size: 7px !important;
+    }
+
+}
+
+
+/* =============================================
+   SMALL PHONES
+   ============================================= */
+
+@media (max-width: 520px) {
+
+    .hero-content {
+        padding: 16px 8px 0 !important;
+    }
+
+
+    .hero {
+        background-size: 108% 100% !important;
+    }
+
+
+    .hero h2 {
+        font-size: 32px !important;
+    }
+
+
+    .year {
+        font-size: 28px !important;
+    }
+
+
+    .tagline {
+        font-size: 6.5px !important;
+    }
+
+
+    .hero .date-box {
+        margin-top: 155px !important;
+
+        width: calc(100% - 24px) !important;
+
+        font-size: 9.5px !important;
+    }
+
+
+    .hero .location {
+        font-size: 8.5px !important;
+    }
+
+
+    .countdown-wrap {
+        width: calc(100% - 16px) !important;
+
+        margin-top: 22px !important;
+    }
+
+
+    .countdown-label {
+        font-size: 6.5px !important;
+    }
+
+
+    .count-box strong {
+        font-size: 20px !important;
+    }
+
+}
