@@ -2265,3 +2265,678 @@ a {
     }
 
 }
+/* =====================================================
+   STEP 1 — REMOVE OLD SEPARATE GANESH PLACEMENT
+   MOBILE ONLY
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    /* Remove the old Ganesh image section */
+    .hero::before {
+        content: none !important;
+        display: none !important;
+        background-image: none !important;
+    }
+
+    /* Remove the temporary Ganesh image
+       that we added below the divider */
+    .gold-divider::after {
+        content: none !important;
+        display: none !important;
+        background-image: none !important;
+    }
+
+}
+/* =====================================================
+   STEP 3 — MOBILE BACKGROUND POSITIONING
+   KEEP GANESH CLEAR OF THE DETAILS
+   DESKTOP UNTOUCHED
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    .hero {
+        position: relative !important;
+
+        width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+
+        display: block !important;
+
+        padding: 0 0 25px !important;
+        box-sizing: border-box !important;
+
+        /* FULL MOBILE GANESH IMAGE */
+        background-image: url("mobile-ganesh.png") !important;
+        background-repeat: no-repeat !important;
+
+        /* IMPORTANT: don't use cover */
+        background-size: 100% 100% !important;
+        background-position: center center !important;
+
+        background-color: #fffaf0 !important;
+    }
+
+
+    /* Keep the image visible */
+    .hero-overlay {
+        display: block !important;
+
+        position: absolute !important;
+        inset: 0 !important;
+
+        background: rgba(255, 250, 240, 0.08) !important;
+
+        z-index: 1 !important;
+        pointer-events: none !important;
+    }
+
+
+    /* Existing content stays above background */
+    .hero-content {
+        position: relative !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin: 0 auto !important;
+
+        padding: 28px 15px 10px !important;
+
+        box-sizing: border-box !important;
+
+        background: transparent !important;
+
+        z-index: 2 !important;
+
+        text-align: center !important;
+    }
+
+
+    /* Push event details below the idol */
+    .hero .date-box {
+        margin-top: 150px !important;
+    }
+
+
+    .hero .location {
+        margin-top: 12px !important;
+    }
+
+
+    .hero .hero-buttons {
+        margin-top: 12px !important;
+        margin-bottom: 0 !important;
+    }
+
+
+    /* Countdown stays inside HOME */
+    .countdown-wrap {
+        position: relative !important;
+
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+
+        width: calc(100% - 30px) !important;
+
+        margin: 18px auto 0 !important;
+
+        box-sizing: border-box !important;
+
+        z-index: 2 !important;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL PHONES
+   ===================================================== */
+
+@media (max-width: 520px) {
+
+    .hero-content {
+        padding: 25px 12px 8px !important;
+    }
+
+    .hero .date-box {
+        margin-top: 125px !important;
+    }
+
+    .countdown-wrap {
+        width: calc(100% - 24px) !important;
+    }
+
+}
+/* =====================================================
+   FINAL MOBILE COMPACT LAYOUT
+   DESKTOP COMPLETELY UNTOUCHED
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    /* ---------- MAIN HERO CONTENT ---------- */
+
+    .hero-content {
+        padding: 22px 12px 5px !important;
+    }
+
+
+    /* ---------- SMALLER HEADING ---------- */
+
+    .hero h2 {
+        font-size: 43px !important;
+        line-height: 0.88 !important;
+        letter-spacing: 1px !important;
+        margin: 12px 0 8px !important;
+    }
+
+
+    /* ---------- SMALLER TOP TITLE ---------- */
+
+    .ornament-title {
+        font-size: 11px !important;
+        letter-spacing: 2px !important;
+    }
+
+
+    /* ---------- YEAR ---------- */
+
+    .year {
+        font-size: 38px !important;
+        line-height: 1 !important;
+        margin: 8px 0 !important;
+    }
+
+
+    /* ---------- TAGLINE ---------- */
+
+    .tagline {
+        font-size: 9px !important;
+        letter-spacing: 1.5px !important;
+        margin: 5px 0 !important;
+    }
+
+
+    /* ---------- DIVIDER ---------- */
+
+    .gold-divider {
+        font-size: 11px !important;
+        margin: 8px 0 !important;
+    }
+
+
+    /* ---------- DATE ---------- */
+
+    .hero .date-box {
+        font-size: 12px !important;
+        padding: 9px 12px !important;
+
+        margin-top: 145px !important;
+
+        width: calc(100% - 35px) !important;
+
+        box-sizing: border-box !important;
+    }
+
+
+    /* ---------- LOCATION ---------- */
+
+    .hero .location {
+        font-size: 11px !important;
+        line-height: 1.45 !important;
+
+        margin-top: 7px !important;
+    }
+
+
+    /* =================================================
+       BUTTONS — SIDE BY SIDE
+       ================================================= */
+
+    .hero .hero-buttons {
+        display: flex !important;
+
+        flex-direction: row !important;
+
+        align-items: stretch !important;
+
+        justify-content: center !important;
+
+        gap: 10px !important;
+
+        width: calc(100% - 20px) !important;
+
+        margin: 10px auto 0 !important;
+    }
+
+
+    .hero .hero-buttons a {
+        width: 50% !important;
+
+        min-width: 0 !important;
+
+        padding: 11px 5px !important;
+
+        box-sizing: border-box !important;
+
+        font-size: 10px !important;
+
+        white-space: nowrap !important;
+    }
+
+
+    /* ---------- COUNTDOWN ---------- */
+
+    .countdown-wrap {
+        width: calc(100% - 24px) !important;
+
+        margin: 12px auto 0 !important;
+
+        padding: 11px 8px 12px !important;
+
+        border-radius: 10px !important;
+    }
+
+
+    .countdown-label {
+        font-size: 8px !important;
+
+        letter-spacing: 1.5px !important;
+
+        margin-bottom: 8px !important;
+    }
+
+
+    .count-box strong {
+        font-size: 24px !important;
+    }
+
+
+    .count-box span {
+        font-size: 8px !important;
+    }
+
+}
+
+
+/* =====================================================
+   EXTRA COMPACT — SMALL PHONES
+   ===================================================== */
+
+@media (max-width: 520px) {
+
+    .hero-content {
+        padding: 20px 10px 5px !important;
+    }
+
+
+    .hero h2 {
+        font-size: 40px !important;
+    }
+
+
+    .year {
+        font-size: 35px !important;
+    }
+
+
+    .tagline {
+        font-size: 8px !important;
+    }
+
+
+    .hero .date-box {
+        margin-top: 125px !important;
+
+        font-size: 11px !important;
+
+        padding: 8px 8px !important;
+    }
+
+
+    .hero .location {
+        font-size: 10px !important;
+    }
+
+
+    .hero .hero-buttons {
+        gap: 8px !important;
+
+        width: calc(100% - 16px) !important;
+    }
+
+
+    .hero .hero-buttons a {
+        padding: 10px 3px !important;
+
+        font-size: 9px !important;
+    }
+
+
+    .countdown-wrap {
+        width: calc(100% - 20px) !important;
+
+        margin-top: 10px !important;
+
+        padding: 10px 6px !important;
+    }
+
+
+    .countdown-label {
+        font-size: 7px !important;
+
+        letter-spacing: 1px !important;
+    }
+
+
+    .count-box strong {
+        font-size: 21px !important;
+    }
+
+}
+/* =====================================================
+   FINAL MOBILE HERO POLISH
+   DESKTOP = COMPLETELY UNTOUCHED
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    /* =========================
+       HERO CONTENT
+       ========================= */
+
+    .hero-content {
+        padding: 20px 10px 0 !important;
+    }
+
+
+    /* =========================
+       TEAM CFC PRESENTS
+       ========================= */
+
+    .ornament-title {
+        font-size: 10px !important;
+        letter-spacing: 1.8px !important;
+        margin-bottom: 5px !important;
+    }
+
+
+    /* =========================
+       MAIN HEADING
+       ========================= */
+
+    .hero h2 {
+        font-size: 38px !important;
+        line-height: 0.88 !important;
+        letter-spacing: 0.5px !important;
+
+        margin: 5px 0 5px !important;
+    }
+
+
+    /* =========================
+       YEAR
+       ========================= */
+
+    .year {
+        font-size: 34px !important;
+        line-height: 1 !important;
+
+        margin: 4px 0 2px !important;
+    }
+
+
+    /* =========================
+       TAGLINE
+       KEEP IT ABOVE GANESH
+       ========================= */
+
+    .tagline {
+        font-size: 8px !important;
+        letter-spacing: 1.2px !important;
+
+        margin: 2px 0 4px !important;
+    }
+
+
+    /* =========================
+       DIVIDER
+       ========================= */
+
+    .gold-divider {
+        font-size: 9px !important;
+
+        margin: 3px 0 !important;
+    }
+
+
+    /* =========================
+       DATE
+       BELOW GANESH
+       ========================= */
+
+    .hero .date-box {
+        margin-top: 165px !important;
+
+        width: calc(100% - 35px) !important;
+
+        padding: 8px 8px !important;
+
+        font-size: 11px !important;
+
+        box-sizing: border-box !important;
+    }
+
+
+    /* =========================
+       LOCATION
+       ========================= */
+
+    .hero .location {
+        font-size: 10px !important;
+
+        line-height: 1.35 !important;
+
+        margin-top: 5px !important;
+    }
+
+
+    /* =========================
+       BUTTONS SIDE BY SIDE
+       ========================= */
+
+    .hero .hero-buttons {
+        display: flex !important;
+
+        flex-direction: row !important;
+
+        justify-content: center !important;
+
+        align-items: stretch !important;
+
+        gap: 8px !important;
+
+        width: calc(100% - 20px) !important;
+
+        margin: 8px auto 0 !important;
+
+        margin-bottom: 0 !important;
+    }
+
+
+    .hero .hero-buttons a {
+        width: 50% !important;
+
+        padding: 10px 3px !important;
+
+        font-size: 9px !important;
+
+        box-sizing: border-box !important;
+
+        white-space: nowrap !important;
+    }
+
+
+    /* =========================
+       COUNTDOWN
+       A LITTLE LOWER
+       ========================= */
+
+    .countdown-wrap {
+        width: calc(100% - 20px) !important;
+
+        margin: 20px auto 0 !important;
+
+        padding: 11px 7px 12px !important;
+
+        box-sizing: border-box !important;
+
+        position: relative !important;
+
+        left: auto !important;
+
+        right: auto !important;
+
+        bottom: auto !important;
+    }
+
+
+    .countdown-label {
+        font-size: 7px !important;
+
+        letter-spacing: 1.2px !important;
+
+        margin-bottom: 7px !important;
+    }
+
+
+    .count-box strong {
+        font-size: 22px !important;
+    }
+
+
+    .count-box span {
+        font-size: 7px !important;
+    }
+
+}
+
+
+/* =====================================================
+   EXTRA SMALL PHONES
+   ===================================================== */
+
+@media (max-width: 520px) {
+
+    .hero-content {
+        padding: 18px 8px 0 !important;
+    }
+
+
+    .hero h2 {
+        font-size: 35px !important;
+
+        line-height: 0.88 !important;
+    }
+
+
+    .year {
+        font-size: 31px !important;
+    }
+
+
+    .tagline {
+        font-size: 7px !important;
+
+        letter-spacing: 1px !important;
+    }
+
+
+    .hero .date-box {
+        margin-top: 145px !important;
+
+        font-size: 10px !important;
+
+        padding: 8px 5px !important;
+    }
+
+
+    .hero .location {
+        font-size: 9px !important;
+    }
+
+
+    .hero .hero-buttons {
+        gap: 7px !important;
+
+        width: calc(100% - 14px) !important;
+    }
+
+
+    .hero .hero-buttons a {
+        padding: 9px 2px !important;
+
+        font-size: 8px !important;
+    }
+
+
+    .countdown-wrap {
+        width: calc(100% - 16px) !important;
+
+        margin-top: 18px !important;
+    }
+
+}
+/* =====================================================
+   MOBILE FINAL — HIDE HERO BUTTONS
+   USE THE SPACE FOR GANESH
+   DESKTOP UNTOUCHED
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    /* Hide Explore Events + Support Us ONLY on mobile */
+    .hero .hero-buttons {
+        display: none !important;
+    }
+
+
+    /* Give the idol more breathing room */
+    .hero .date-box {
+        margin-top: 205px !important;
+    }
+
+
+    /* Keep location directly under date */
+    .hero .location {
+        margin-top: 7px !important;
+    }
+
+
+    /* Move countdown down slightly */
+    .countdown-wrap {
+        margin-top: 28px !important;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL PHONES
+   ===================================================== */
+
+@media (max-width: 520px) {
+
+    .hero .date-box {
+        margin-top: 180px !important;
+    }
+
+    .countdown-wrap {
+        margin-top: 25px !important;
+    }
+
+}
