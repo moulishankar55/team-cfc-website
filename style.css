@@ -3208,348 +3208,365 @@ a {
     .count-box strong {
         font-size: 20px !important;
     }
-
 }
-/* =====================================================
-   MOBILE HOME — POSTER STYLE
-   GANESH + ALL DETAILS INSIDE ONE HOME
-   DESKTOP COMPLETELY UNTOUCHED
-   ===================================================== */
+/* ===== COMPACT HISTORY CARDS ===== */
 
-@media (max-width: 768px) {
+.history-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    align-items: stretch;
+}
 
-    /* ==============================
-       COMPLETE MOBILE HOME
-       ============================== */
+.history-card {
+    min-width: 0;
+    min-height: 0;
+    padding: 22px 18px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.history-card .year-icon {
+    margin-bottom: 8px;
+}
+
+.history-card .history-year {
+    color: #fff !important;
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+.history-card h3 {
+    font-size: 1.05rem;
+    margin: 8px 0;
+}
+
+.history-card p {
+    font-size: 0.82rem;
+    line-height: 1.7;
+    margin: 8px 0 16px;
+}
+
+.history-card .gallery-open {
+    width: 100%;
+    margin-top: auto;
+    padding: 11px 8px;
+    font-size: 0.72rem;
+}
+
+/* ===== HIGHLIGHT THE UPCOMING 2027 CARD ===== */
+
+.history-card.upcoming-2027 {
+    border: 2px solid #d4af37 !important;
+    box-shadow: 0 0 16px rgba(212, 175, 55, 0.35);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.history-card.upcoming-2027 .history-year {
+    color: #f0c75e !important;
+}
+
+.history-card.upcoming-2027 .gallery-open {
+    background: linear-gradient(135deg, #f5dc91, #d4af37);
+    color: #57000d !important;
+    border: 1px solid #d4af37 !important;
+    font-weight: 700;
+}
+
+.history-card.upcoming-2027:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 24px rgba(212, 175, 55, 0.55);
+}
+
+/* ===== TABLET ===== */
+
+@media (max-width: 1000px) {
+    .history-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 600px) {
+    .history-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .history-card {
+        padding: 20px 16px;
+    }
+}
+/* WhatsApp and Instagram navbar buttons */
+.nav-social-buttons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.nav-social-buttons .whatsapp-btn,
+.nav-social-buttons .instagram-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 13px 17px;
+    background: #c9a044;
+    color: #570b12;
+    border: 1px solid #c9a044;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 11px;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.nav-social-buttons .whatsapp-btn:hover,
+.nav-social-buttons .instagram-btn:hover {
+    background: #e0bd63;
+    border-color: #e0bd63;
+    transform: translateY(-2px);
+}
+
+/* Smaller screens */
+@media (max-width: 1100px) {
+    .nav-social-buttons {
+        gap: 8px;
+    }
+
+    .nav-social-buttons .whatsapp-btn,
+    .nav-social-buttons .instagram-btn {
+        padding: 11px 10px;
+        font-size: 10px;
+    }
+}
+/* ========================================
+   TEAM CFC — MOBILE LAYOUT CORRECTION
+   ======================================== */
+
+@media screen and (max-width: 600px) {
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: clip;
+    }
+
+    main,
+    section {
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    /* NAVBAR */
+    .navbar {
+        width: 100%;
+        min-height: 70px;
+        height: auto;
+        padding: 10px 12px;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .logo-area {
+        gap: 6px;
+        flex: 1 1 auto;
+        min-width: 0;
+    }
+
+    .logo-symbol {
+        width: 34px;
+        height: 34px;
+        flex-shrink: 0;
+        font-size: 20px;
+    }
+
+    .logo-area h1 {
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+
+    .logo-area p {
+        font-size: 6px;
+        letter-spacing: 1px;
+    }
+
+    .menu-toggle {
+        display: block;
+        flex-shrink: 0;
+        font-size: 25px;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        flex: 0 0 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 12px;
+    }
+
+    /* WHATSAPP + INSTAGRAM */
+    .nav-social-buttons {
+        display: flex;
+        flex: 1 0 100%;
+        flex-direction: row;
+        justify-content: center;
+        gap: 8px;
+        width: 100%;
+    }
+
+    .nav-social-buttons a {
+        flex: 1 1 0;
+        min-width: 0;
+        padding: 10px 4px;
+        font-size: 9px;
+        text-align: center;
+        white-space: normal;
+    }
+
+    /* HERO */
     .hero {
-        position: relative !important;
-
-        display: block !important;
-
-        height: 970px !important;
-        min-height: 970px !important;
-
-        padding: 0 !important;
-
-        overflow: hidden !important;
-
-        background-image: url("mobile-ganesh.png") !important;
-        background-repeat: no-repeat !important;
-
-        /*
-           Keep the original PNG proportions.
-           Enlarge it enough to make Ganesh prominent.
-        */
-        background-size: cover !important;
-
-        background-position: center 42% !important;
-
-        background-color: #fffaf0 !important;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        height: auto;
+        min-height: 780px;
+        display: flex;
+        align-items: flex-start;
+        background-position: 58% top;
+        background-size: auto 100%;
     }
-
-
-    /* ==============================
-       REMOVE OLD IMAGE PSEUDO
-       ============================== */
-
-    .hero::before {
-        display: none !important;
-        content: none !important;
-    }
-
-
-    /* ==============================
-       REMOVE OLD OVERLAY
-       ============================== */
 
     .hero-overlay {
-        display: none !important;
+        background: linear-gradient(
+            180deg,
+            rgba(255, 250, 240, 0.93) 0%,
+            rgba(255, 250, 240, 0.78) 48%,
+            rgba(255, 250, 240, 0.15) 100%
+        );
     }
-
-
-    /* ==============================
-       CONTENT — OVER THE IMAGE
-       ============================== */
 
     .hero-content {
-        position: relative !important;
-
-        width: 100% !important;
-        max-width: 100% !important;
-
-        height: auto !important;
-
-        margin: 0 !important;
-
-        padding: 25px 12px 0 !important;
-
-        box-sizing: border-box !important;
-
-        background: transparent !important;
-
-        z-index: 5 !important;
-
-        text-align: center !important;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        margin: 0;
+        padding: 35px 20px 220px;
     }
-
-
-    /* ==============================
-       TEAM CFC PRESENTS
-       ============================== */
 
     .ornament-title {
-        font-size: 9px !important;
-
-        letter-spacing: 1.5px !important;
-
-        margin: 0 0 5px !important;
-
-        line-height: 1.2 !important;
+        font-size: 10px;
+        letter-spacing: 2px;
+        overflow-wrap: anywhere;
     }
-
-
-    /* ==============================
-       VINAYAKA CHAVITHI
-       ============================== */
 
     .hero h2 {
-        font-size: 35px !important;
-
-        line-height: 0.9 !important;
-
-        letter-spacing: 0 !important;
-
-        margin: 5px 0 5px !important;
-
-        text-shadow: none !important;
+        max-width: 100%;
+        font-size: clamp(38px, 11vw, 52px);
+        line-height: 0.95;
+        letter-spacing: 0;
+        overflow-wrap: anywhere;
     }
-
-
-    /* ==============================
-       2026
-       ============================== */
 
     .year {
-        font-size: 29px !important;
-
-        line-height: 1 !important;
-
-        margin: 4px 0 2px !important;
+        font-size: 44px;
     }
-
-
-    /* ==============================
-       TAGLINE
-       ============================== */
 
     .tagline {
-        font-size: 7px !important;
-
-        letter-spacing: 1px !important;
-
-        line-height: 1.2 !important;
-
-        margin: 2px 0 3px !important;
+        font-size: 8px;
+        letter-spacing: 1.5px;
     }
 
-
-    /* ==============================
-       DIVIDER
-       ============================== */
-
-    .gold-divider {
-        font-size: 8px !important;
-
-        margin: 3px 0 !important;
+    .date-box {
+        max-width: 100%;
+        padding: 10px;
+        font-size: 9px;
+        letter-spacing: 0.5px;
     }
 
-
-    /* =================================================
-       DATE
-       POSITIONED LOWER — ON THE IMAGE
-       ================================================= */
-
-    .hero .date-box {
-        position: absolute !important;
-
-        top: 680px !important;
-
-        left: 50% !important;
-
-        transform: translateX(-50%) !important;
-
-        width: calc(100% - 35px) !important;
-
-        margin: 0 !important;
-
-        padding: 9px 6px !important;
-
-        box-sizing: border-box !important;
-
-        font-size: 10px !important;
-
-        z-index: 10 !important;
+    .hero-buttons {
+        flex-wrap: wrap;
+        gap: 8px;
     }
 
-
-    /* ==============================
-       LOCATION
-       ============================== */
-
-    .hero .location {
-        position: absolute !important;
-
-        top: 735px !important;
-
-        left: 0 !important;
-
-        width: 100% !important;
-
-        margin: 0 !important;
-
-        padding: 0 20px !important;
-
-        box-sizing: border-box !important;
-
-        font-size: 9px !important;
-
-        line-height: 1.4 !important;
-
-        text-align: center !important;
-
-        z-index: 10 !important;
+    .primary-btn,
+    .secondary-btn {
+        padding: 12px;
+        font-size: 9px;
     }
 
-
-    /* ==============================
-       HIDE BUTTONS
-       ============================== */
-
-    .hero .hero-buttons {
-        display: none !important;
-    }
-
-
-    /* =================================================
-       COUNTDOWN
-       ================================================= */
-
+    /* COUNTDOWN */
     .countdown-wrap {
-        position: absolute !important;
-
-        top: 805px !important;
-
-        left: 50% !important;
-
-        right: auto !important;
-
-        bottom: auto !important;
-
-        transform: translateX(-50%) !important;
-
-        width: calc(100% - 25px) !important;
-
-        margin: 0 !important;
-
-        padding: 12px 7px !important;
-
-        box-sizing: border-box !important;
-
-        z-index: 10 !important;
+        left: 12px;
+        right: 12px;
+        bottom: 15px;
+        width: auto;
+        max-width: none;
+        padding: 12px 8px;
     }
-
 
     .countdown-label {
-        font-size: 7px !important;
-
-        letter-spacing: 1px !important;
-
-        margin-bottom: 7px !important;
+        font-size: 8px;
+        letter-spacing: 1px;
     }
-
 
     .count-box strong {
-        font-size: 21px !important;
+        font-size: 27px;
     }
 
-
-    .count-box span {
-        font-size: 7px !important;
+    /* PAGE SECTIONS */
+    .section {
+        width: 100%;
+        padding: 55px 18px;
     }
 
-}
-
-
-/* =====================================================
-   SMALL PHONES
-   ===================================================== */
-
-@media (max-width: 520px) {
-
-    .hero {
-        height: 900px !important;
-
-        min-height: 900px !important;
-
-        background-size: cover !important;
-
-        background-position: center 42% !important;
+    .about-grid,
+    .committee-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 
-
-    .hero-content {
-        padding-top: 20px !important;
+    .timeline {
+        flex-direction: column;
+        gap: 18px;
     }
 
-
-    .hero h2 {
-        font-size: 32px !important;
-
-        line-height: 0.9 !important;
+    .timeline-line {
+        width: 2px;
+        height: 20px;
     }
 
-
-    .year {
-        font-size: 27px !important;
+    .event-card {
+        width: 100%;
+        max-width: 320px;
     }
 
-
-    .tagline {
-        font-size: 6.5px !important;
+    .history-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
     }
 
-
-    .hero .date-box {
-        top: 625px !important;
-
-        width: calc(100% - 25px) !important;
-
-        font-size: 9px !important;
-    }
-
-
-    .hero .location {
-        top: 680px !important;
-
-        font-size: 8.5px !important;
-    }
-
-
-    .countdown-wrap {
-        top: 750px !important;
-
-        width: calc(100% - 16px) !important;
-    }
-
-
-    .countdown-label {
-        font-size: 6.5px !important;
-    }
-
-
-    .count-box strong {
-        font-size: 19px !important;
+    .history-card {
+        width: 100%;
+        min-width: 0;
+        padding: 25px 18px;
     }
 
 }
