@@ -13,9 +13,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const secondsEl = document.getElementById("seconds");
 
     // Ganapathi Prathishta:
-    // 14 September 2026, 9:00 AM IST.
+    // 4 September 2027, 9:00 AM IST.
     const targetDate =
-        new Date("2026-09-14T09:00:00+05:30").getTime();
+        new Date("2027-09-4T09:00:00+05:30").getTime();
 
 
     function updateCountdown() {
